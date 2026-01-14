@@ -1,5 +1,39 @@
-/* External CSS but with unused rules and heavy selectors */
-.header { padding: 0; margin: 0; }
-.content { max-width: 1200px; margin: 0 auto; }
-.section { box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-.large-rule { background: linear-gradient(#fff, #eee); }
+/* Quitamos márgenes por defecto para que no descuadre */
+body { 
+    margin: 0; 
+    font-family: Arial, sans-serif; 
+    background: #fff; 
+    color: #333; 
+}
+
+/* El fondo ahora carga la versión ligera */
+.header { 
+    background-image: url('images/heavy_image_1.webp'); 
+    height: 300px; /* Un poco más bajito para ahorrar píxeles */
+    background-size: cover; 
+    background-position: center;
+    /* Centramos el texto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; 
+    font-size: 2em; /* Texto grande */
+}
+
+.content { 
+    max-width: 800px; /* Ancho de lectura cómodo */
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+.section { 
+    padding: 20px 0; 
+    border-bottom: 1px solid #ddd; 
+}
+
+.img-large { 
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    margin-bottom: 10px;
+}
