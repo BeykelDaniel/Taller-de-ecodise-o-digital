@@ -14,27 +14,56 @@ Instrucciones para el alumno:
 4. Limpiar CSS y mover estilos críticos al head mínimo.
 5. Documentar los cambios en README_final.md y medir mejoras antes/después.
 
----------------------------------------------------------------------------
+----------------------------------------------------------------------------------
 
-# Optimización de Web - Grupo Ecodiseño
+Taller de Ecodiseño Digital – Optimización Web Sostenible
 
-## Simulación de Hosting Verde
-Nuestra web optimizada está alojada simuladamente en **GreenServe Cloud**, un proveedor que utiliza servidores alimentados al 100% por energía hidroeléctrica certificada.
-* **Datacenter:** Localizado en Noruega para aprovechar la refrigeración natural (Free Cooling), eliminando el aire acondicionado.
-* **PUE (Eficiencia):** 1.1 (Líder en la industria).
+1. Descripción del proyecto
+    En este taller hemos trabajado en equipo para optimizar una página web inicialmente pesada y poco eficiente, aplicando principios de ecodiseño digital. El objetivo ha sido reducir el consumo de recursos, mejorar el rendimiento y disminuir el impacto ambiental asociado a la carga de la página.
 
-## Mejoras Aplicadas
+    La web final ha sido desplegada en Netlify, simulando un entorno de hosting eficiente y alineado con buenas prácticas de sostenibilidad digital.
 
-### 1. Imágenes
-* Conversión de formato JPG a **WebP** (reducción de peso del 85%).
-* Implementación de `loading="lazy"` en imágenes secundarias.
-* Dimensiones explícitas para evitar CLS (saltos de contenido).
 
-### 2. Código y Rendimiento
-* **JS:** Se eliminó el bucle que causaba 5000 reflows. Se implementó `DocumentFragment` para renderizar la lista en una sola operación de pintado.
-* **Bloqueo:** Scripts movidos al final con atributo `defer` para no bloquear el primer renderizado (FCP).
-* **CSS:** Unificación de estilos inline y externos. Adición de soporte para **Dark Mode** (ahorro energético en pantallas OLED).
+2. Análisis inicial
+    En la versión original detectamos varios problemas de alto impacto digital:
+        - Imágenes grandes sin optimizar (`.jpg`) y sin lazy loading.
+        - Peso elevado innecesario en recursos gráficos.
+        - Carga de todos los elementos al inicio, aunque no fueran críticos.
+        - Falta de optimización orientada al rendimiento y la eficiencia energética.
 
-### Resultados
-* **Peso Inicial:** ~4.5 MB | **Peso Final:** ~400 KB
-* **Huella de Carbono:** Reducida de 1.8g a 0.15g por visita (Estimación Website Carbon).
+    Estas características provocaban mayor tiempo de carga, más consumo de datos y una huella de carbono digital más alta por visita.
+
+
+3. Acciones de optimización realizadas
+    Durante el proceso de ecodiseño se aplicaron las siguientes mejoras:
+
+        3.1. Optimización de imágenes:
+            - Conversión de imágenes `.jpg` a formato WebP (*imagen_optimizada*.webp`).
+            - Reducción del peso total manteniendo calidad visual adecuada.
+            - Aplicación de `loading="lazy"` para imágenes no críticas.
+
+        3.2. Optimización del código:
+            - Revisión y simplificación del HTML.
+            - CSS limpio y sin reglas innecesarias.
+            - JavaScript ligero y sin operaciones costosas.
+
+        3.3. Gestión de recursos:
+            - Reducción del número de peticiones.
+            - Carga diferida de scripts para evitar bloqueos del renderizado.
+
+4. Resultados obtenidos
+    Tras la optimización se consiguió:
+        - Reducción significativa del peso total de la página.
+        - Mejora notable en la puntuación de rendimiento (Lighthouse).
+        - Menor consumo de datos por visita.
+        - Disminución estimada de la huella de carbono según Website Carbon Calculator.
+
+    Estos cambios mejoran tanto la experiencia de usuario como la sostenibilidad del sitio.
+
+5. Hosting verde (simulado)
+    El proyecto se ha desplegado en Netlify, plataforma que apuesta por infraestructuras eficientes y optimizadas. A efectos del taller, se simula que el sitio se aloja en un proveedor que utiliza energía 100% renovable y centros de datos con políticas de reducción de emisiones de carbono.
+
+
+6. Conclusión
+    Este ejercicio demuestra que pequeñas decisiones técnicas en diseño y desarrollo web pueden tener un impacto positivo real en el medio ambiente, sin comprometer la funcionalidad ni la estética del sitio.
+
