@@ -1,39 +1,110 @@
-/* Quitamos márgenes por defecto para que no descuadre */
+
 body { 
     margin: 0; 
-    font-family: Arial, sans-serif; 
-    background: #fff; 
-    color: #333; 
+    background-color: #f9f7f1; 
+    font-family: 'Georgia', 'Times New Roman', serif; 
+    color: #2a2a2a; 
+    line-height: 1.6;
 }
 
-/* El fondo ahora carga la versión ligera */
 .header { 
-    background-image: url('images/heavy_image_1.webp'); 
-    height: 300px; /* Un poco más bajito para ahorrar píxeles */
-    background-size: cover; 
-    background-position: center;
-    /* Centramos el texto */
+    background: linear-gradient(to bottom, #1a1a1d, #4a0e0e); 
+    height: 250px; 
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white; 
-    font-size: 2em; /* Texto grande */
+    color: #eec16e;
+    text-align: center;
+    border-bottom: 4px double #eec16e;
+}
+
+.header h1 {
+    font-size: 3em;
+    letter-spacing: 2px;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.5);
+    margin: 0;
 }
 
 .content { 
-    max-width: 800px; /* Ancho de lectura cómodo */
-    margin: 0 auto; 
-    padding: 20px; 
+    max-width: 800px; 
+    margin: -30px auto 0;
+    padding: 30px; 
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-radius: 4px;
 }
 
 .section { 
-    padding: 20px 0; 
-    border-bottom: 1px solid #ddd; 
+    margin-bottom: 30px; 
+    padding-bottom: 20px; 
+    border-bottom: 1px solid #d4af37; 
+}
+
+h2 {
+    color: #740001;
+    font-size: 1.8em;
+    border-left: 4px solid #d4af37;
+    padding-left: 15px;
+    margin-top: 0;
 }
 
 .img-large { 
     width: 100%; 
     height: auto; 
     display: block; 
-    margin-bottom: 10px;
+    margin: 20px 0;
+    border-radius: 2px;
+    border: 1px solid #ddd;
+    filter: sepia(20%);
+    transition: filter 0.3s ease;
+}
+
+.img-large:hover {
+    filter: sepia(0%);
+}
+
+button {
+    background-color: #2a2a2a;
+    color: #eec16e;
+    border: 1px solid #eec16e;
+    padding: 12px 24px;
+    font-family: inherit;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 2px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #740001;
+    color: white;
+    box-shadow: 0 0 10px rgba(116, 0, 1, 0.4);
+}
+
+/* Listas */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+li::before {
+    content: "✦ "; 
+    color: #d4af37;
+    margin-right: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+    body { background: #121212; color: #ccc; }
+    .content { background: #1e1e1e; box-shadow: none; }
+    h2 { color: #a87e7e; }
+    li { border-bottom-color: #333; }
+    .img-large { filter: brightness(80%); }
 }
