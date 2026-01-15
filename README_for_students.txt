@@ -38,9 +38,9 @@ Taller de Ecodiseño Digital – Optimización Web Sostenible
     Durante el proceso de ecodiseño se aplicaron las siguientes mejoras:
 
         3.1. Optimización de imágenes:
-            - Conversión de imágenes `.jpg` a formato WebP (*imagen_optimizada*.webp`).
-            - Reducción del peso total manteniendo calidad visual adecuada.
-            - Aplicación de `loading="lazy"` para imágenes no críticas.
+            - HTML: Estructura simplificada y semántica, eliminando todos los estilos en línea.
+            - CSS: Limpieza de reglas no usadas, implementación de Modo Oscuro para ahorro energético y diseño ligero sin dependencias externas.
+            - JavaScript: Eliminación de operaciones matemáticas pesadas y bucles bloqueantes para liberar la CPU.
 
         3.2. Optimización del código:
             - Revisión y simplificación del HTML.
