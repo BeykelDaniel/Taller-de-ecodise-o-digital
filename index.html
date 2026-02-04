@@ -1,54 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Optimizada</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Abuelos Viajeros</title>
+    <link href="./output.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-gray-100 font-sans">
 
-<div class="header">
-  <h1>Web Optimizada</h1>
-</div>
+    <nav class="bg-blue-600 p-4 text-white shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Abuelos Viajeros</h1>
+            <a href="#" class="bg-white text-blue-600 px-4 py-2 rounded-lg font-bold">Entrar</a>
+        </div>
+    </nav>
 
-<div class="content">
-  <div class="section">
-    <h2>Galería Ligera</h2>
-    <p>Imágenes en WebP y con lazy loading.</p>
-    <img src="images/imagen1_optimizada.webp" class="img-large" alt="Imagen principal">
+    <div class="container mx-auto p-4 max-w-4xl">
 
-    <img src="images/imagen1_optimizada.webp" 
-         class="img-large" 
-         alt="Imagen principal" 
-         width="800" height="600"> 
-    
-    <img src="images/imagen2_optimizada.webp" 
-         class="img-large" 
-         alt="Imagen 2" 
-         loading="lazy" 
-         width="800" height="600">
-    
-    <img src="images/imagen3_optimizada.webp" 
-         class="img-large" 
-         alt="Imagen 3" 
-         loading="lazy" 
-         width="800" height="600">
-  </div>
+        <div class="bg-white p-4 rounded-xl shadow-md mb-6">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Casa Rural "El Descanso"</h2>
+            <img src="images/rural.webp"
+                class="w-full h-64 object-cover rounded-lg mb-4"
+                alt="Casa rural">
 
-  <div class="section">
-    <h2>Scripts</h2>
-    <p>Botón que no bloquea el navegador:</p>
-    <button id="btnProceso">Ejecutar proceso</button>
-  </div>
+            <div class="flex gap-2">
+                <img src="images/casa1.webp" class="w-1/3 h-24 object-cover rounded-lg">
+                <img src="images/casa2.webp" class="w-1/3 h-24 object-cover rounded-lg">
+                <img src="images/casa3.webp" class="w-1/3 h-24 object-cover rounded-lg">
+            </div>
+            <p class="text-gray-500 text-sm mt-2">Fotos optimizadas por Diego</p>
+        </div>
 
-  <div class="section">
-    <h2>Lista Rápida</h2>
-    <ul id="list"></ul>
-  </div>
-</div>
+        <div class="grid md:grid-cols-2 gap-6">
 
-<script src="script.js" defer></script>
+            <div class="bg-white p-6 rounded-xl shadow-md border-2 border-blue-100">
+                <h3 class="text-xl font-bold text-blue-800 mb-4">Reservar Estancia</h3>
+
+                <div class="mb-4">
+                    <p class="text-gray-600">Precio por persona:</p>
+                    <p class="text-4xl font-bold text-gray-800">45€ <span class="text-sm font-normal">/ noche</span></p>
+                </div>
+
+                <form class="space-y-3">
+                    <input type="text" placeholder="Nombre completo" class="w-full p-2 border rounded">
+                    <input type="date" class="w-full p-2 border rounded">
+                    <button type="button" onclick="alert('¡Reserva guardada en la base de datos!')"
+                            class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 rounded-lg text-lg">
+                        CONFIRMAR RESERVA
+                    </button>
+                </form>
+                <p class="text-gray-400 text-xs mt-2 text-center">Gestión de reservas por Karen</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md border-2 border-pink-100">
+                <h3 class="text-xl font-bold text-pink-700 mb-4">Compañeros de Viaje</h3>
+                <p class="mb-4 text-gray-600">¡No vayas solo! Esta gente también va a ir:</p>
+
+                <div class="flex items-center gap-3 mb-4 p-2 bg-gray-50 rounded-lg">
+                    <img src="images/señor.webp" class="w-12 h-12 rounded-full">
+                    <div>
+                        <p class="font-bold">Manolo, 72 años</p>
+                        <p class="text-sm text-gray-500">"Busco partida de dominó"</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3 mb-4 p-2 bg-gray-50 rounded-lg">
+                    <img src="images/señora.webp" class="w-12 h-12 rounded-full">
+                    <div>
+                        <p class="font-bold">Rosa, 68 años</p>
+                        <p class="text-sm text-gray-500">"Me gusta pasear"</p>
+                    </div>
+                </div>
+
+                <button class="w-full bg-pink-500 text-white py-2 rounded-lg">Chatear con ellos</button>
+                <p class="text-gray-400 text-xs mt-2 text-center">Módulo social por Dani</p>
+            </div>
+
+        </div>
+    </div>
 
 </body>
 </html>
